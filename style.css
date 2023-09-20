@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script&family=Italianno&family=Montserrat&family=Poppins&display=swap');
+
+/* 
+font-family: 'Allura', cursive;
+font-family: 'Italianno', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Dancing Script', cursive;
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    /* background-color: #fdf6e2; */
+    background: radial-gradient(circle, rgba(253,246,226,1) 0%, rgba(253,226,226,0.8) 100%);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    grid-template-areas: "head head head head"
+                          "main main main main"
+                          "foot foot foot foot"
+    ;
+}
+
+h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #fc7777;
+    padding: 0px 20px;
+}
+
+h1:hover{
+    filter: blur(1.2px);
+    transition: 0.2s;
+}
+
+.head{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+
+    grid-area: head;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation a{
+    font-size: 1rem;
+    color: blueviolet;
+}
+.navigation a:hover{
+    color: #fc7777;
+    transition:  linear .2s;
+}
+
+.main{
+    grid-area: main;
+}
+
+.first_section{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.first_section img{
+    width: 90%;
+}
+
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: 'Allura', cursive;
+    font-size: 1.7rem;
+    color: #fdf6e2;
+
+    transition: 2s;
+}
+
+.foot{
+    grid-area: foot;
+}
+
+
+@media (width >= 768px) {
+
+    .head{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 95%;
+        margin: auto;
+        
+    }
+    
+    .navigation{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navigation a{
+        padding: 20px;
+    }
+
+    .text{
+        font-size: 3rem;
+    }
+
+}
+
+@media (width >= 1200px) {
+
+    .navigation a{
+        padding: 20px 25px;
+    }
+
+    .text{
+        font-size: 3.5rem;
+    }
+    
+}
+
